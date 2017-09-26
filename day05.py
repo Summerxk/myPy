@@ -22,3 +22,33 @@ L1 = ['Hello', 'World', 18, 'Apple', None]
 print([s.lower() for s in L1 if isinstance(s,str)])
 
 #2.生成器
+#我们可以通过rang（） 生成100万个元素的列表，但是如果我们仅仅需要前面的几个元素参与计算，那么会浪费大量的内存空间，
+#python中有一边循环一边计算的机制，成为生成器：generator
+L = [x * x for x in range(1,11)]
+print(L)
+#我们只要将[] 改为（） 就是一个generator
+g = (x * x for x in range(1,11))
+print(g)
+print(next(g))#通过next() 函数获得 generator 下一个值
+for x in g:
+    print(x)
+
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        print(b)
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+fib(5)
+
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+#如果函数中包含yield关键字，那个这个函数就不再是一个普通的函数，而是一个generator
+#这里难理解的是 generator和函数的执行流程不一样，函数是顺序执行，遇到return 语句或者最后一行函数语句就返回。而变成generator
+#在那次调用next()的时候执行，遇到yield语句返回，再次执行时候从上次返回的yield语句处继续执行
