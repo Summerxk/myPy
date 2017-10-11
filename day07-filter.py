@@ -40,3 +40,4 @@ for n in primes():
         print(n)
     else:
         break
+#filter()的作用是从一个序列中筛出符合条件的元素。由于filter()使用了惰性计算，所以只有在取filter()结果的时候，才会真正筛选并每次返回下一个筛出的元素。
