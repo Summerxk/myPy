@@ -70,6 +70,3 @@ def greeting(name):
 #安装第三方模块
 
 #在python中，安装第三方模块，是通过包管理工具pip完成的。
-
-
-
