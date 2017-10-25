@@ -15,6 +15,7 @@ tags
 *.war
 *.ear
 *.db
+*.idea
  
 ######################
 # Windows
