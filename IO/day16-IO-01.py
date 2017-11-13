@@ -36,5 +36,12 @@ finally:
 with open('/home/summer/aa.sql','r') as f:
     print(f.read())
 
-
+#调用read()会依次读取文件的全部内容，如果文件过大，会内存益处
+#可以调用read(size)方法，最多读取size个字节的内容。另外调用 readline()可以每次读取一行内容，调用readlines() 一次读取所有的内容，并按照行返回list
+#
+print('======================readlines()=========================')
+f = open('/home/summer/aa.sql')
+for line in f.readlines():
+    print(line.strip())#把末尾的\n去除
+    
 
