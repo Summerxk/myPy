@@ -8,3 +8,4 @@ print(sys.path)
 print('summer')# 打印环境变量
 print(sys.argv)#当前文件的相对路径
 #print(sys.argv[2])#python day01.py 1 2 3 ---> 2
+#python 中存在小数字池：-5--257
