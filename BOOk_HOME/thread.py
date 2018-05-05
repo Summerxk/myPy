@@ -42,12 +42,12 @@ if __name__ == '__main__':
 '''
 
 '''
-主线程结束，子线程也结束 所以没有等待线程一进行结束
+将线程一的休眠时间改为 8 秒 主线程结束，子线程也结束 所以没有等待线程一进行结束
 --- all thread start time is 18-38-24 23:38:58
 +++ thread one start: 18-38-24 23:38:58
 +++ thread two start: 18-38-24 23:38:58
 +++ thread two sleep 2 second
-+++ thread one sleep 4 second
++++ thread one sleep 8 second
 +++ thread two sleep stop, stop time is : 18-39-24 23:39:00
 --- all thread end time is 18-39-24 23:39:04
 '''
